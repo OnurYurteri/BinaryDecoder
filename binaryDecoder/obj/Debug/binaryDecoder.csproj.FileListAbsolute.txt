@@ -1,0 +1,11 @@
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\bin\Debug\binaryDecoder.exe.config
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\bin\Debug\binaryDecoder.exe
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\bin\Debug\binaryDecoder.pdb
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.csprojResolveAssemblyReference.cache
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.Form1.resources
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.Properties.Resources.resources
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.csproj.GenerateResource.Cache
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.exe
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.pdb
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.Form2.resources
+c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.Form3.resources
