@@ -9,3 +9,36 @@ c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder
 c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.pdb
 c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.Form2.resources
 c:\users\onur_\documents\visual studio 2015\Projects\binaryDecoder\binaryDecoder\obj\Debug\binaryDecoder.Form3.resources
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\bin\Debug\binaryDecoder.exe.config
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.exe
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.pdb
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\bin\Debug\binaryDecoder.exe
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\bin\Debug\binaryDecoder.pdb
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.csprojResolveAssemblyReference.cache
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Form1.resources
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Form2.resources
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Form3.resources
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Properties.Resources.resources
+C:\Users\Lab_admin\Desktop\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.csproj.GenerateResource.Cache
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\bin\Debug\binaryDecoder.exe.config
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.exe
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.pdb
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\bin\Debug\binaryDecoder.exe
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\bin\Debug\binaryDecoder.pdb
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.csprojResolveAssemblyReference.cache
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Form1.resources
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Form2.resources
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Form3.resources
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.Properties.Resources.resources
+C:\Users\onur_\Documents\Visual Studio 2015\Projects\SE2017-master\binaryDecoder\obj\Debug\binaryDecoder.csproj.GenerateResource.Cache
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\bin\Debug\binaryDecoder.exe.config
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.exe
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.pdb
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\bin\Debug\binaryDecoder.exe
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\bin\Debug\binaryDecoder.pdb
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.csprojResolveAssemblyReference.cache
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.Form1.resources
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.Form2.resources
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.Form3.resources
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.Properties.Resources.resources
+C:\Users\onur_\Source\Repos\SE2017\binaryDecoder\obj\Debug\binaryDecoder.csproj.GenerateResource.Cache

@@ -21,6 +21,7 @@ namespace binaryDecoder
             string result="";
             FileStream readStream = new FileStream(file.directory,FileMode.Open);
             BinaryReader readBinary = new BinaryReader(readStream);
+            
             for (int i = 0; i < str.structure.Count; i++)
             {
                 if (str.structure[i].ToString().Split('-')[0].Equals("INT"))
@@ -33,7 +34,7 @@ namespace binaryDecoder
                 }
                 else if (str.structure[i].ToString().Split('-')[0].Equals("CHAR"))
                 {
-                    result += readBinary.ReadChars(Int32.Parse(str.structure[i].ToString().Split('-')[1]));
+                    result += new String(readBinary.ReadChars(Int32.Parse(str.structure[i].ToString().Split('-')[1])));
                 }
                 else if (str.structure[i].ToString().Split('-')[0].Equals("EMPTY"))
                 {
@@ -41,7 +42,15 @@ namespace binaryDecoder
                 }
                 else if (str.structure[i].ToString().Split('-')[0].Equals("STARTLOOP"))
                 {
-                    DecodeLoop(Int32.Parse(str.structure[i].ToString().Split('-')[1]),i,readBinary);
+                    result += DecodeLoop(Int32.Parse(str.structure[i].ToString().Split('-')[1]), i + 1, readBinary);
+                    for (int j = i; j < str.structure.Count; j++)
+                    {
+                        if (str.structure[j].ToString().Split('-')[0].Equals("ENDLOOP"))
+                        {
+                            i += j - i;
+                            break;
+                        }
+                    }
                 }
             }
             readBinary.Close();
@@ -69,7 +78,7 @@ namespace binaryDecoder
                     }
                     else if (str.structure[index].ToString().Split('-')[0].Equals("CHAR"))
                     {
-                        result += readBinary.ReadChars(Int32.Parse(str.structure[index].ToString().Split('-')[1]));
+                        result += new String(readBinary.ReadChars(Int32.Parse(str.structure[index].ToString().Split('-')[1])));
                     }
                     else if (str.structure[index].ToString().Split('-')[0].Equals("EMPTY"))
                     {
@@ -77,8 +86,9 @@ namespace binaryDecoder
                     }
                     else if (str.structure[index].ToString().Split('-')[0].Equals("STARTLOOP"))
                     {
-                        result += DecodeLoop(Int32.Parse(str.structure[index].ToString().Split('-')[1]), index,readBinary);
+                        result += DecodeLoop(Int32.Parse(str.structure[index].ToString().Split('-')[1]), index+1,readBinary);
                     }
+                    index++;
                 }
                 index = _index;
             }

@@ -19,7 +19,11 @@ namespace binaryDecoder
             strToModify = str;
             InitializeComponent();
         }
-
+        private bool IsInt(string s)
+        {
+            int x = 0;
+            return int.TryParse(s, out x);
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < strToModify.structure.Count; i++)
@@ -32,7 +36,22 @@ namespace binaryDecoder
         {
             if (textBox1.Enabled)
             {
-                listBox1.Items.Add(comboBox1.Text +"-"+ textBox1.Text);
+                if (comboBox1.SelectedIndex>-1)
+                {
+                    if (!textBox1.Text.Equals("") && IsInt(textBox1.Text))
+                    {
+                        listBox1.Items.Add(comboBox1.Text + "-" + textBox1.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter count");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select type");
+                }
+                
             }
             else
             {
@@ -45,17 +64,39 @@ namespace binaryDecoder
         {
             if (textBox2.Enabled)
             {
-                listBox1.Items[listBox1.SelectedIndex] = comboBox2.SelectedItem +"-"+ textBox2.Text;
+                if (comboBox2.SelectedIndex>-1)
+                {
+                    if (!textBox2.Text.Equals("") && IsInt(textBox2.Text))
+                    {
+                        listBox1.Items[listBox1.SelectedIndex] = comboBox2.SelectedItem + "-" + textBox2.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter count");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select type");
+                }
+                
             }
             else
             {
-                listBox1.Items.Add(comboBox2.Text);
+                listBox1.Items[listBox1.SelectedIndex] = comboBox2.SelectedItem;
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Remove(listBox1.SelectedItem);
+            if (listBox1.SelectedIndex>-1)
+            {
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Please select type that you wanted to delete");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

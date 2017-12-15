@@ -19,6 +19,12 @@ namespace binaryDecoder
             InitializeComponent();
         }
 
+        private bool IsInt(string s)
+        {
+            int x = 0;
+            return int.TryParse(s, out x);
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             ArrayList str = new ArrayList();
@@ -54,7 +60,7 @@ namespace binaryDecoder
         {
             textBox2.Text = "";
             textBox2.Enabled = false;
-            if (comboBox1.SelectedItem.ToString() != "INT" && comboBox1.SelectedItem.ToString() != "ENDLOOP") {
+            if (comboBox1.SelectedItem.ToString() != "INT" && comboBox1.SelectedItem.ToString() != "ENDLOOP" && comboBox1.SelectedItem.ToString() != "FLOAT") {
                 textBox2.Enabled = true;
             }
         }
@@ -63,7 +69,7 @@ namespace binaryDecoder
         {
             textBox3.Text = "";
             textBox3.Enabled = false;
-            if (comboBox2.SelectedItem.ToString() != "INT" && comboBox2.SelectedItem.ToString() != "ENDLOOP")
+            if (comboBox2.SelectedItem.ToString() != "INT" && comboBox2.SelectedItem.ToString() != "ENDLOOP" && comboBox2.SelectedItem.ToString() != "FLOAT")
             {
                 textBox3.Enabled = true;
             }
@@ -71,17 +77,89 @@ namespace binaryDecoder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add(comboBox1.SelectedItem + textBox2.Text);
+            if (textBox2.Enabled)
+            {
+                if (comboBox1.SelectedIndex > -1)
+                {
+                    if (!textBox2.Text.Equals("") && IsInt(textBox2.Text))
+                    {
+                        listBox1.Items.Add(comboBox1.SelectedItem + "-" + textBox2.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter count");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select type");
+                }
+            }
+            else
+            {
+                if (comboBox1.SelectedIndex>-1)
+                {
+                    listBox1.Items.Add(comboBox1.SelectedItem);
+                }
+                else
+                {
+                    MessageBox.Show("Please select type");
+                }
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox1.Items[listBox1.SelectedIndex] = comboBox2.SelectedItem + textBox3.Text;
+            if (textBox3.Enabled)
+            {
+                if (comboBox2.SelectedIndex>-1)
+                {
+                    if (!textBox3.Text.Equals("") && IsInt(textBox3.Text))
+                    {
+                        listBox1.Items[listBox1.SelectedIndex] = comboBox2.SelectedItem + "-" + textBox3.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter count");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select type");
+                }
+            }
+            else
+            {
+                if (comboBox2.SelectedIndex >-1)
+                {
+                    if (listBox1.SelectedIndex>-1)
+                    {
+                        listBox1.Items[listBox1.SelectedIndex] = comboBox2.SelectedItem;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select type that you wanted to change");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select type");
+                }
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Remove(listBox1.SelectedItem);
+            if (listBox1.SelectedIndex>-1)
+            {
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Please select type that you wanted to delete");
+            }
         }
     }
 }

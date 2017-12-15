@@ -32,7 +32,6 @@ namespace binaryDecoder
                 currFile.directory = openFileDialog1.FileName;
                 currFile.fileName = openFileDialog1.FileName.Split('\\')[openFileDialog1.FileName.Split('\\').Length-1];
                 sr.Close();
-                MessageBox.Show(currFile.directory);
                 isFileSelected = true;
                 ChangeDecodeBtnState();
             }
@@ -69,10 +68,6 @@ namespace binaryDecoder
                 isStructureSelected = true;
                 ChangeDecodeBtnState();
                 ChangeModifyBtnState();
-                for (int i = 0; i < ((Structure)listBox1.SelectedItem).structure.Count; i++)
-                {
-                    MessageBox.Show(((Structure)listBox1.SelectedItem).structure[i].ToString());
-                }
             }
         }
 
