@@ -17,10 +17,6 @@ namespace binaryDecoder
             this.structure = _structure;
         }
 
-        public void ModifyStr(int index, string type) {
-            structure[index] = type;
-        }
-
         public override string ToString()
         {
             return name.ToString();

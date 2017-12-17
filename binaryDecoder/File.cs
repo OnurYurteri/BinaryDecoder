@@ -10,7 +10,6 @@ namespace binaryDecoder
     {
         public string fileName;
         public string directory;
-        public string content;
         
     }
 }
