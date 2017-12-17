@@ -103,7 +103,7 @@ namespace binaryDecoder
         {
             textBox1.Text = "";
             textBox1.Enabled = false;
-            if (comboBox1.SelectedItem.ToString() != "INT" && comboBox1.SelectedItem.ToString() != "ENDLOOP" && comboBox1.SelectedItem.ToString() != "FLOAT")
+            if (comboBox1.SelectedItem.ToString() != "INT" && comboBox1.SelectedItem.ToString() != "ENDLOOP" && comboBox1.SelectedItem.ToString() != "FLOAT" && comboBox1.SelectedItem.ToString()!="STRING")
             {
                 textBox1.Enabled = true;
             }
@@ -113,7 +113,7 @@ namespace binaryDecoder
         {
             textBox2.Text = "";
             textBox2.Enabled = false;
-            if (comboBox2.SelectedItem.ToString() != "INT" && comboBox2.SelectedItem.ToString() != "ENDLOOP" && comboBox2.SelectedItem.ToString() != "FLOAT")
+            if (comboBox2.SelectedItem.ToString() != "INT" && comboBox2.SelectedItem.ToString() != "ENDLOOP" && comboBox2.SelectedItem.ToString() != "FLOAT" && comboBox2.SelectedItem.ToString() != "STRING")
             {
                 textBox2.Enabled = true;
             }
@@ -147,6 +147,19 @@ namespace binaryDecoder
             {
                 MessageBox.Show("Please fill all necessary fields.");
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Structure will be lost, are you sure that you want to continue?", "Delete this structure", MessageBoxButtons.YesNo, MessageBoxIcon.Question, 
+                MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+            {
+                System.IO.File.Delete(@"c:\\BinaryDecoder\\" + strToModify.name);
+                MessageBox.Show("Structure deleted successfully!");
+                Program.form.RefreshStr();
+                this.Hide();
+            }
+            
         }
     }
 }

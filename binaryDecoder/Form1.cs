@@ -16,7 +16,7 @@ namespace binaryDecoder
         private bool isFileSelected = false;
         private bool isStructureSelected = false;
         private File currFile = new File();
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace binaryDecoder
                 textBox1.Text = "";
                 textBox1.Text = openFileDialog1.FileName;
                 currFile.directory = openFileDialog1.FileName;
-                currFile.fileName = openFileDialog1.FileName.Split('\\')[openFileDialog1.FileName.Split('\\').Length-1];
+                currFile.fileName = openFileDialog1.FileName.Split('\\')[openFileDialog1.FileName.Split('\\').Length - 1];
                 sr.Close();
                 isFileSelected = true;
                 ChangeDecodeBtnState();
@@ -39,7 +39,7 @@ namespace binaryDecoder
 
         private void ChangeDecodeBtnState()
         {
-            if(isFileSelected==true && isStructureSelected == true)
+            if (isFileSelected == true && isStructureSelected == true)
             {
                 button4.Enabled = true;
             }
@@ -63,7 +63,7 @@ namespace binaryDecoder
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(!(listBox1.SelectedIndex < 0))
+            if (!(listBox1.SelectedIndex < 0))
             {
                 isStructureSelected = true;
                 ChangeDecodeBtnState();
@@ -104,11 +104,16 @@ namespace binaryDecoder
                 {
                     listBox1.Items.Add(Utilities.ReadStr(readedStr[i]));
                 }
-                
+
             }
             else
             {
                 Directory.CreateDirectory(@"c:\BinaryDecoder");
+            }
+            DirectoryInfo dirOutput = new DirectoryInfo(textBox2.Text);
+            if (!dirOutput.Exists)
+            {
+                Directory.CreateDirectory(textBox2.Text);
             }
         }
 
@@ -116,6 +121,20 @@ namespace binaryDecoder
         {
             Decoding decoder = new Decoding(currFile, (Structure)listBox1.SelectedItem);
             richTextBox1.Text = decoder.Decode();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
+            {
+                textBox2.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SaveFile(textBox2.Text + "\\" + currFile.fileName + ".txt", RichTextBoxStreamType.UnicodePlainText);
+            MessageBox.Show("File saved successfully.");
         }
     }
 }

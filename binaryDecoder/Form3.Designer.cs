@@ -116,6 +116,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "INT",
             "FLOAT",
+            "STRING",
             "CHAR",
             "EMPTY",
             "STARTLOOP",
@@ -162,6 +163,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "INT",
             "FLOAT",
+            "STRING",
             "CHAR",
             "EMPTY",
             "STARTLOOP",

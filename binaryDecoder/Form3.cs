@@ -60,7 +60,7 @@ namespace binaryDecoder
         {
             textBox2.Text = "";
             textBox2.Enabled = false;
-            if (comboBox1.SelectedItem.ToString() != "INT" && comboBox1.SelectedItem.ToString() != "ENDLOOP" && comboBox1.SelectedItem.ToString() != "FLOAT") {
+            if (comboBox1.SelectedItem.ToString() != "INT" && comboBox1.SelectedItem.ToString() != "ENDLOOP" && comboBox1.SelectedItem.ToString() != "FLOAT" && comboBox1.SelectedItem.ToString() != "STRING") {
                 textBox2.Enabled = true;
             }
         }
@@ -69,7 +69,7 @@ namespace binaryDecoder
         {
             textBox3.Text = "";
             textBox3.Enabled = false;
-            if (comboBox2.SelectedItem.ToString() != "INT" && comboBox2.SelectedItem.ToString() != "ENDLOOP" && comboBox2.SelectedItem.ToString() != "FLOAT")
+            if (comboBox2.SelectedItem.ToString() != "INT" && comboBox2.SelectedItem.ToString() != "ENDLOOP" && comboBox2.SelectedItem.ToString() != "FLOAT" && comboBox2.SelectedItem.ToString() != "STRING")
             {
                 textBox3.Enabled = true;
             }

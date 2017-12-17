@@ -31,16 +31,17 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -77,6 +78,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(133, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(91, 20);
+            this.textBox1.TabIndex = 7;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(15, 46);
@@ -93,6 +101,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "INT",
             "FLOAT",
+            "STRING",
             "CHAR",
             "EMPTY",
             "STARTLOOP",
@@ -108,12 +117,19 @@
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Location = new System.Drawing.Point(235, 112);
+            this.groupBox3.Location = new System.Drawing.Point(234, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(229, 75);
+            this.groupBox3.Size = new System.Drawing.Size(231, 75);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Change";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(132, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(90, 20);
+            this.textBox2.TabIndex = 8;
             // 
             // button2
             // 
@@ -131,6 +147,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "INT",
             "FLOAT",
+            "STRING",
             "CHAR",
             "EMPTY",
             "STARTLOOP",
@@ -144,9 +161,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Location = new System.Drawing.Point(235, 209);
+            this.groupBox4.Location = new System.Drawing.Point(234, 176);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(228, 55);
+            this.groupBox4.Size = new System.Drawing.Size(231, 55);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Delete";
@@ -171,25 +188,24 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // button5
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(91, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(132, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 20);
-            this.textBox2.TabIndex = 8;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.button5.ForeColor = System.Drawing.Color.FloralWhite;
+            this.button5.Location = new System.Drawing.Point(234, 244);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(231, 37);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Delete this structure";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 359);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -223,5 +239,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button5;
     }
 }
