@@ -90,7 +90,10 @@ namespace binaryDecoder
 
         private void button5_Click(object sender, EventArgs e)
         {
+            isStructureSelected = false;
             RefreshStr();
+            ChangeDecodeBtnState();
+            ChangeModifyBtnState();
         }
 
         public void RefreshStr()
